@@ -1,0 +1,111 @@
+body{
+    background-color: black;
+}
+section{
+    border: 2px solid whitesmoke;
+    position: absolute;
+    top: 10%;
+    margin: 0 40%;
+    height: 700px;
+    width: 400px;
+    border-radius: 10px;
+
+}
+#ss{
+    border: 2px solid whitesmoke;
+    height: 20px;
+    width: 100px;
+    margin-left: 30px;
+    color: yellow;
+    text-align: center;
+}
+#mm{
+    border: 2px solid whitesmoke;
+    height: 20px;
+    width: 100px;
+    margin-left: 200px;
+    margin-top: -20px;
+    color: yellow;
+    text-align: center;
+}
+#hh{
+    height: 20px;
+    width: 100px;
+    margin-left: 100px;
+    bottom: -50px;
+}
+#name{
+    border: 2px solid whitesmoke;
+    height: 700px;
+    width: 400px;
+    margin: 5% 40%;
+    color: wheat;
+    border-radius: 10px;
+    text-align: center;
+}
+#name .name{
+    margin-top: 18%;
+    /* text-align: center; */
+}
+#name .item {
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+}
+#name a{
+    text-decoration: none;
+    font-size: 20px;
+    /* display: none; */
+}
+table{
+    position: absolute;
+    border-collapse: collapse;
+    /* cursor: pointer; */
+    position: relative;
+    margin: 90px 70px;
+} 
+td{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    border: 2px solid #333;
+    color: rgb(255, 238, 0);
+    cursor: pointer;
+    vertical-align: center;
+    font-size: 70px;
+}
+table tr:first-child td {
+    border-top: 0;
+}
+table tr:last-child td {
+    border-bottom: 0;
+}
+table tr td:first-child {
+    border-left: 0;
+}
+table tr td:last-child {
+    border-right: 0;
+}
+.endgame{
+    width: 200px;
+    height: 500px;
+    top: 15%;
+    /* cursor: pointer; */
+    background-color: yellowgreen;
+    position: absolute;
+    left: 55%;
+    margin-left: -190px;
+    padding: 50px 50px;
+    text-align: center;
+    border: 5px;
+    font-size: 2em;
+}
+#hh{
+    height: 100px;
+    width: 300px;
+    margin-left: -37pt;
+    margin-top: 200px;
+    font-size: 40px;
+    color: #333;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

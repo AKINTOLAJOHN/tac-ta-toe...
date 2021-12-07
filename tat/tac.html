@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" con   tent="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tac.css">
+</head>
+<body>
+    <section>
+        <table>
+            </tr>
+            <td  class="cell" id="a" onclick="myFunct(this); check()"></td>
+            <td  class="cell" id="b" onclick="myFunct(this); check()"></td>
+            <td  class="cell" id="c" onclick="myFunct(this); check()" ></td>
+            </tr>
+            </tr>
+            <td  class="cell" id="d" onclick="myFunct(this); check()"></td>
+            <td class="cell" id="e" onclick="myFunct(this); check()"> </td>
+            <td  class="cell" id="f" onclick="myFunct(this); check()" ></td>
+            </tr>
+            </tr>
+            <td  class="cell" id="g" onclick="myFunct(this); check()"></td>
+            <td  class="cell" id="h" onclick="myFunct(this); check()"></td>
+            <td class="cell" id="i" onclick="myFunct(this); check()"></td>
+            </tr>
+        </table>
+        <div id="ss"></div>
+        <div id="mm"></div>
+        <!-- <button id="hh" onclick="start()">Replay</button> -->
+    </section>
+
+        <div class="endgame" id="endgame">
+        <button id="hh" onclick="start()">Replay</button>
+        </div>
+        <script>
+            let turn = 1;    
+            function myFunct(z){ 
+                if (z.innerText !="" ) return;
+                if (turn == 1){
+                    z.innerHTML = 'x';
+                    turn = 0;
+                }else{
+                    z.innerHTML = '0';
+                    turn = 1;  
+                }
+            }
+
+            function check(){
+                let a1 = a.innerHTML;
+                let a2 = b.innerHTML;
+                let a3 = c.innerHTML;
+                let a4 = d.innerHTML;
+                let a5 = e.innerHTML;
+                let a6 = f.innerHTML;
+                let a7 = g.innerHTML;
+                let a8 = h.innerHTML;
+                let a9 = i.innerHTML; 
+                
+                // if x wins
+                if (a1 == 'x' && a2 == 'x' && a3 =='x'){
+                        ss.innerText++;
+                        // cell.disabled ='disabled';
+                        document.getElementById('endgame').hidden = false;
+                }
+                else if (a4 == 'x' && a5 == 'x' && a6 =='x'){
+                    ss.innerText++;
+                    document.getElementById('endgame').hidden = false;                    
+                }else if (a7 == 'x' && a8 == 'x' && a9 =='x'){
+                    ss.innerText++;
+                    document.getElementById('endgame').hidden = false;                    
+                }else if (a1 == 'x' && a5 == 'x' && a9 =='x'){
+                    ss.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }else if (a2 == 'x' && a5 == 'x' && a8 =='x'){
+                    ss.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }else if (a1 == 'x' && a4 == 'x' && a7 =='x'){
+                    ss.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }else if (a2 == 'x' && a5 == 'x' && a8 =='x'){
+                    ss.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }else if (a3 == 'x' && a6 == 'x' && a9 =='x'){
+                    ss.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }else if (a3 == 'x' && a5 == 'x' && a7 =='x'){
+                    ss.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }
+                // if 0 wins
+                else if (a1 == '0' && a2 == '0' && a3 =='0'){
+                    mm.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }
+                else if (a4 == '0' && a5 == '0' && a6 =='0'){
+                    mm.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }else if (a7 == '0' && a8 == '0' && a9 =='0'){
+                    mm.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }else if (a1 == '0' && a5 == '0' && a9 =='0'){
+                    mm.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }else if (a2 == '0' && a5 == '0' && a8 =='0'){
+                    mm.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }else if (a1 == '0' && a4 == '0' && a7 =='0'){
+                    mm.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }else if (a2 == '0' && a5 == '0' && a8 =='0'){
+                    mm.innerText++;
+                }else if (a3 == '0' && a6 == '0' && a9 =='0'){
+                    mm.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }else if (a3 == '0' && a5 == '0' && a7 =='0'){
+                    mm.innerText++;
+                    document.getElementById('endgame').hidden = false; 
+                }
+                // draw
+                else if ((a1 =='x' || a1 =='0') && (a2 =='x' || a2 =='0') && (a3 =='x' || a3 =='0') && (a4 =='x' || a4 =='0') && (a5 =='x' || a5 =='0') && (a6 =='x' || a6 =='0') && (a7 =='x' || a7 =='0') && (a8 =='x' || a8 =='0') && (a8 =='x' || a8 =='0') && (a9 =='x' || a9 =='0')){
+                    alert("IT'S DRAW CLICK ON REPLAY TO CONTINUE")
+                    document.getElementById('endgame').hidden = false; 
+                }
+            }
+            function start(){
+                a.innerText ='';
+                b.innerText ='';
+                c.innerText ='';
+                d.innerText ='';
+                e.innerText ='';
+                f.innerText ='';
+                g.innerText ='';
+                h.innerText ='';
+                i.innerText ='';
+                document.getElementById('endgame').hidden = true; 
+            }
+
+</script>
+</body>
+</html>
